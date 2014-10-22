@@ -22,10 +22,34 @@
 *  
 */
 
+import java.util.Scanner;
+
 public class Grader {
   
   public static void main(String[] args) {
     //TODO insert your code here
+      Scanner scar = new Scanner(System.in);
+      System.out.println ("Please enter the amount of points possible in the test.");
+      double PointsPossible = scar.nextDouble();
+      if (PointsPossible < 0 ) {
+      System.out.println ("Thank You!");
+      }
+      else {
+      System.out.println ("Please enter the amount of items missed");
+      }
+      double PointsMissed = scar.nextDouble();
+      double Grade = PointsPossible - PointsMissed;
+      if (PointsMissed < 0) {
+      System.out.println ("Thank You!");
+      }
+      else {
+      System.out.println ((Grade / PointsPossible) * 100);
+      System.out.print (" is the score out of 100");
+      }
+    
+    
+    
+    
   }
   
   

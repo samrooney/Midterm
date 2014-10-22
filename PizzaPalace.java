@@ -8,13 +8,37 @@
  * 
  * For guidance, refer to the flowchart PizzaPalace.pdf distributed with this file
  * 
- * @author <change to your name>
- * @version <today's date>
+ * @author <Sam Rooney>
+ * @version <22/10/14>
  */
-public class PizzaPalace {
+ 
+import java.util.Scanner;
 
-	public static void main(String[] args) {
-		// TODO Replace this section with your own code
+   public class PizzaPalace {
+
+
+	   public static void main(String[] args) {
+   		
+         Scanner bobby = new Scanner(System.in);
+         
+         System.out.println ("How many people must you feed?");
+         
+         
+         double PeopleFeed = bobby.nextDouble();
+         
+         System.out.println ("How many slices are necessary to feed each person?");
+         
+         double SlicesPerPerson = bobby.nextDouble();
+         
+         System.out.println ("How many slices are in each pie?");
+         
+         double PiecesInPie = bobby.nextDouble();
+         
+         double dog = ((PeopleFeed * SlicesPerPerson) / PiecesInPie);
+         
+         System.out.print ( new Float( Math.round(dog)) );
+         
+         System.out.print (" is the number of pizzas you must buy.");  
 		
 		// NOTE
 		// The Math class provides a function, ceil() short for 'ceiling', which will take a double
